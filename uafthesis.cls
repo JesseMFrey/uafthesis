@@ -296,21 +296,24 @@
 \noindent\hskip2in{\@comone}\relax\vskip1.5ex\relax
 \noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{3.75in}{.05mm}\hspace{.25in}\vskip-1ex\relax
 \noindent\hskip2in{\@comtwo}\relax\vskip1.5ex\relax
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{3.75in}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in{\@comthree}\relax\vskip1.5ex\relax
 
 \ifnum \@numberofmembers = 3
-\vskip-3ex\relax\noindent\hskip2in\relax{\@commchair}\relax\vskip-1ex\relax
+\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{3.75in}{.05mm}\hspace{.25in}\vskip-1ex\relax
+\noindent\hskip2in\relax{\@commchair}\relax\vskip-1ex\relax
 \noindent\hskip2in\relax Advisory Committee Chair \vskip2.5ex
 \fi
 
 \ifnum \@numberofmembers = 4
+\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{3.75in}{.05mm}\hspace{.25in}\vskip-1ex\relax
+\noindent\hskip2in{\@comthree}\relax\vskip1.5ex\relax
 \noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{3.75in}{.05mm}\hspace{.25in}\vskip-1ex\relax
 \noindent\hskip2in\relax{\@commchair}\relax\vskip-1ex\relax
 \noindent\hskip2in\relax Advisory Committee Chair \vskip2.5ex
 \fi
 
 \ifnum \@numberofmembers = 5
+\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{3.75in}{.05mm}\hspace{.25in}\vskip-1ex\relax
+\noindent\hskip2in{\@comthree}\relax\vskip1.5ex\relax
 \noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{3.75in}{.05mm}\hspace{.25in}\vskip-1ex\relax
 \noindent\hskip2in{\@comfour}\relax\vskip1.5ex\relax
 \noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{3.75in}{.05mm}\hspace{.25in}\vskip-1ex\relax
@@ -319,6 +322,8 @@
 \fi
 
 \ifnum \@numberofmembers = 6
+\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{3.75in}{.05mm}\hspace{.25in}\vskip-1ex\relax
+\noindent\hskip2in{\@comthree}\relax\vskip1.5ex\relax
 \noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{3.75in}{.05mm}\hspace{.25in}\vskip-1ex\relax
 \noindent\hskip2in{\@comfour}\relax\vskip1.5ex\relax
 \noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{3.75in}{.05mm}\hspace{.25in}\vskip-1ex\relax
