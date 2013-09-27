@@ -784,7 +784,7 @@
   %\setcounter{section}{1}%
   \renewcommand\@chapapp{\appendixname}%
   \renewcommand\thechapter{\Alph{chapter}}
-  \addcontentsline{toc}{frontchapter}{Appendix}}
+  \addcontentsline{toc}{frontchapter}{Appendices}}
 \setlength\arraycolsep{5\p@}
 \setlength\tabcolsep{6\p@}
 \setlength\arrayrulewidth{.4\p@}
@@ -1097,9 +1097,9 @@
 \newcommand\tablename{Table}
 \newcommand\partname{Part}
 \newcommand\chaptername{Chapter}
-\newcommand\appendixname{Appendix}
+\newcommand\appendixname{Appendices}
 \newcommand\abstractname{Abstract}
-\newcommand\acknowledgename{Acknowledgements}
+\newcommand\acknowledgename{Acknowledgments}
 \newcommand\prefname{Preface}
 \newcommand\indname{Index}
 
