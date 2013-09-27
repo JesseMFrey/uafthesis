@@ -1106,7 +1106,7 @@
 %% get bibliography in contents as a section (robustly)
 \renewcommand\bibliography[1]{
         \newpage
-                \addcontentsline{toc}{section}{\bibname}
+                \addcontentsline{toc}{frontchapter}{\bibname}
 \if@filesw
   \immediate\write\@auxout{\string\bibdata{#1}}\fi
   \@input@{\jobname.bbl}}
