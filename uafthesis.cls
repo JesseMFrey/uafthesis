@@ -183,7 +183,8 @@
     \addcontentsline{toc}{frontchapter}{\titlename}
     \null\vfill
   \begin{center}
-    { {\expandafter\uppercase\expandafter{\@title}} \par}
+    { \renewcommand{\baselinestretch}{2}\normalsize {
+    \expandafter\uppercase\expandafter{\@title}} \par}
     \bigskip \bigskip \medskip 
         A \par 
         \medskip 
@@ -223,7 +224,7 @@
 \addcontentsline{toc}{frontchapter}{\signame}
 
 \begin{center}
-    { \large {\expandafter\uppercase\expandafter{\@title}} \par}
+    {\renewcommand{\baselinestretch}{2}\large   {\expandafter\uppercase\expandafter{\@title}} \par}
     \bigskip \bigskip
     By \par
     \bigskip \bigskip
@@ -286,7 +287,7 @@
 \addcontentsline{toc}{frontchapter}{\signame}
 
 \begin{center}
-    { \large {\expandafter\uppercase\expandafter{\@title}} \par}
+    { \renewcommand{\baselinestretch}{2}\large {\expandafter\uppercase\expandafter{\@title}} \par}
     \bigskip \bigskip
     By \par
     \bigskip \bigskip
