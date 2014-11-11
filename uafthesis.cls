@@ -404,9 +404,9 @@
 %%%%%%%%%%%%%%%
 \if@twoside
     \def\ps@headings{%
-      \let\@oddfoot\@empty\let\@evenfoot\@empty
-      \def\@evenhead{\thepage\hfil\slshape\leftmark}%
-      \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
+      \let\@oddhead\@empty\let\@evenhead\@empty
+      \def\@evenfoot{\hfil\thepage\hfil}%
+      \def\@oddfoot{\hfil\thepage\hfil}%
       \let\@mkboth\markboth
       \def\chaptermark##1{%
         \markboth {\uppercase{\ifnum \c@secnumdepth >\m@ne
@@ -418,8 +418,8 @@
             ##1}}}}
 \else
     \def\ps@headings{%
-      \let\@oddfoot\@empty
-      \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
+      \let\@oddhead\@empty
+      \def\@oddfoot{\hfil\thepage\hfil}%
       \let\@mkboth\markboth
       \def\chaptermark##1{%
         \markright {\uppercase{\ifnum \c@secnumdepth >\m@ne
@@ -427,9 +427,9 @@
             ##1}}}}
 \fi
 \def\ps@myheadings{%
-    \let\@oddfoot\@empty\let\@evenfoot\@empty
-    \def\@evenhead{\thepage\hfil\slshape\leftmark}%
-    \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
+    \let\@oddhead\@empty\let\@evenhead\@empty
+    \def\@evenfoot{\hfil\thepage\hfil}%
+    \def\@oddfoot{\hfil\thepage\hfil}%
     \let\@mkboth\@gobbletwo
     \let\chaptermark\@gobble
     \let\sectionmark\@gobble
