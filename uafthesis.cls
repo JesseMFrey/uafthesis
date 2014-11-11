@@ -1133,22 +1133,25 @@
 \fi
 
 %% here's where we meet the page layout requirements of the grad school
-\oddsidemargin 0.5in   %   Note that \oddsidemargin = \evensidemargin
-   \evensidemargin 0.0in
-   \marginparwidth 0pt
+\oddsidemargin 0pt
+\evensidemargin 0pt
+\marginparwidth 50pt
 \marginparsep 10pt      % Horizontal space between outer margin and 
                         % marginal note
-\topmargin 0.0in        %    Nominal distance from top of page to top of
+\topmargin -36.135pt    %    Nominal distance from top of page to top of
                         %    box containing running head.
 \headheight 12pt        %    Height of box containing running head.
 \headsep 25pt           %    Space between running head and text.
 \topskip = 11pt         %    '\baselineskip' for first line of page.
                         % Bottom of page:
-\footskip 30pt          %    Distance from baseline of box containing
+\footskip 36.135pt      %    Distance from baseline of box containing
                         %    foot to baseline of last line of text.
-\textheight = 8.5truein
-%\advance\textheight by \topskip
-\textwidth 6.0truein     % Width of text line.
+\hoffset 0in
+\voffset 0in
+
+
+\textheight = 9truein
+\textwidth 6.5truein     % Width of text line.
                          % For two-column mode: 
 \columnsep 10pt          %    Space between columns 
 \columnseprule 0pt       %    Width of rule between columns.
