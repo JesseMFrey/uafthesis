@@ -905,6 +905,27 @@
     \@starttoc{loa}%
     \if@restonecol\twocolumn\fi
     \newpage\renewcommand{\thepage}{\arabic{page}}}
+%% list of acronyms for use with the acronym package
+%% Input file is the acronym table
+\newcommand\listofacronyms[1]{%
+    \@chapteronefalse
+    \if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapteruaf*{\listacname
+      \@mkboth{\uppercase{\listacname}}%
+              {\uppercase{\listacname}}}%
+    \@chapteronetrue
+    %% get this in contents as a section
+    \addcontentsline{toc}{frontchapter}{\listacname}
+    %\cftafterloftitle
+    \input{#1}%
+    \if@restonecol\twocolumn\fi
+    \newpage\renewcommand{\thepage}{\arabic{page}}}
+    
 \newcommand\listofothermaterials{%
     \@chapteronefalse
     \if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
@@ -1039,6 +1060,7 @@
 \newcommand\listtablename{List of Tables}
 \newcommand\listothermatname{List of Other Materials}
 \newcommand\listappname{List of Appendices}
+\newcommand\listacname{List of Acronyms}
 \newcommand\bibname{References}
 \newcommand\indexname{Index}
 \newcommand\figurename{Figure}
