@@ -48,6 +48,10 @@
 %%		inadequate. Also added a second \makesig macro (\makenamedsig), which puts the names that you specify
 %%		on the page. This is not required by the Grad school, but it looks nice. Just pray that the Dept. Chair
 %%		isn't out of town when you turn in your thesis.
+%%    
+%%    Edited by Jesse Frey 20014
+%%      Fixed margins and page numbers for new requirements
+%%      removed makesig macro and messed with spacing to apease the grad school
 
 
 \NeedsTeXFormat{LaTeX2e} 
