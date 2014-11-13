@@ -213,66 +213,6 @@
 }\newpage \thispagestyle{empty}~ %a blank page that will serve as the back of the title page
 \newpage}
 
-%% The \makesig macro emits a UAF-approved signature page ready for
-%% your committee's signature.  requires the the \title, \author, and
-%% \college macros have been defined.  (this bastard finally is
-%% independant of the font you choose for the thesis!)
-\def\makesig{
-\setcounter{page}{1}
-\thispagestyle{empty}
-\if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
-\addcontentsline{toc}{frontchapter}{\signame}
-
-\begin{center}
-    {\renewcommand{\baselinestretch}{2}\large   {\expandafter\uppercase\expandafter{\@title}} \par}
-    \bigskip \bigskip
-    By \par
-    \bigskip \bigskip
-    {\@author} \par
-    \bigskip \bigskip \medskip
-\vspace{.25in}
-\end{center}
-
-\noindent\hspace{.25in}RECOMMENDED:\hspace{.45in}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip2.5ex\relax
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip2.5ex\relax
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip2.5ex\relax
-
-\ifnum \@numberofmembers = 3
-\vskip-3.5ex\relax
-\noindent\hskip2in\relax Advisory Committee Chair \vskip2.5ex
-\fi
-
-\ifnum \@numberofmembers = 4
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in\relax Advisory Committee Chair \vskip2.5ex
-\fi
-
-\ifnum \@numberofmembers = 5
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip2.5ex\relax
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in\relax Advisory Committee Chair \vskip2.5ex
-\fi
-
-\ifnum \@numberofmembers = 6
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip2.5ex\relax
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip2.5ex\relax
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in\relax Advisory Committee Chair \vskip2.5ex
-\fi
-%% here's where we put the chair of the department
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}
-\vskip-1ex\relax\noindent\hskip2in\relax Chair, Department of {\@department} \vskip1.5ex
-
-\bigskip \bigskip \par
-
-\noindent\hspace{.25in}APPROVED: \hspace{.8in} \rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\phantom{\hspace{.25in}APPROVED: \hspace{.8in} }Dean, {\@college}\hspace{.25in}\vskip2.5ex\relax
-\noindent\phantom{\hspace{.25in}APPROVED: \hspace{.8in} }\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\phantom{\hspace{.25in}APPROVED: \hspace{.8in} }Dean of the Graduate School\hspace{.25in}\vskip2.5ex\relax
-\noindent\phantom{\hspace{.25in}APPROVED: \hspace{.8in} }\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\phantom{\hspace{.25in}APPROVED: \hspace{.8in} }Date
-\newpage \thispagestyle{empty}~ % a blank page that serves as the backside of the signature page
-\newpage}
 
 %% The \makenamedsig macro emits a UAF-approved signature page ready for
 %% your committee's signature, with committee member names printed under each line.
