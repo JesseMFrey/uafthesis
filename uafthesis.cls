@@ -51,7 +51,8 @@
 %%    
 %%    Edited by Jesse Frey 20014
 %%      Fixed margins and page numbers for new requirements
-%%      removed makesig macro and messed with spacing to apease the grad school
+%%      removed makesig macro and messed with spacing to appease the grad school
+%%      Added listofacronyms macro to make a list of acronyms
 
 
 \NeedsTeXFormat{LaTeX2e} 
