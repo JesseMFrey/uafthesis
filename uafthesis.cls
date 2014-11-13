@@ -213,6 +213,10 @@
 }\newpage \thispagestyle{empty}~ %a blank page that will serve as the back of the title page
 \newpage}
 
+%% X-spacing for signature lines this may need to be fudged to get grad school approval
+\newcommand*{\sigxspace}{0.42in}
+%% Y-spacing for signature lines this may need to be fudged to get grad school approval
+\newcommand*{\sigyspace}{0.62in}
 
 %% The \makenamedsig macro emits a UAF-approved signature page ready for
 %% your committee's signature, with committee member names printed under each line.
@@ -233,64 +237,64 @@
     \bigskip \bigskip
     {\@author} \par
     \bigskip  \medskip
-\vspace{.25in}
+\vspace{\sigyspace}
 \end{center}
 
-\noindent\hspace{.25in}RECOMMENDED:\hspace{.45in}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in{\@comone}\relax\vskip1.5ex\relax
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in{\@comtwo}\relax\vskip1.5ex\relax
+\noindent\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}{\@comone}\relax\vskip0.23in\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}{\@comtwo}\relax\vskip0.23in\relax
 
 \ifnum \@numberofmembers = 3
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in\relax{\@commchair}\relax\vskip-1ex\relax
-\noindent\hskip2in\relax Advisory Committee Chair \vskip2.5ex
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\relax{\@commchair}\relax\vskip-1.0ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\relax Advisory Committee Chair \vskip5.0ex
 \fi
 
 \ifnum \@numberofmembers = 4
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in{\@comthree}\relax\vskip1.5ex\relax
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in\relax{\@commchair}\relax\vskip-1ex\relax
-\noindent\hskip2in\relax Advisory Committee Chair \vskip2.5ex
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}{\@comthree}\relax\vskip1.5ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\relax{\@commchair}\relax\vskip-1.0ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\relax Advisory Committee Chair \vskip3.4ex
 \fi
 
 \ifnum \@numberofmembers = 5
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in{\@comthree}\relax\vskip1.5ex\relax
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in{\@comfour}\relax\vskip1.5ex\relax
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in\relax{\@commchair}\relax\vskip-1ex\relax
-\noindent\hskip2in\relax Advisory Committee Chair \vskip2.5ex
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}{\@comthree}\relax\vskip0.23in\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}{\@comfour}\relax\vskip0.23in\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\relax{\@commchair}\relax\vskip-1.0ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\relax Advisory Committee Chair \vskip3.4ex
 \fi
 
 \ifnum \@numberofmembers = 6
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in{\@comthree}\relax\vskip1.5ex\relax
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in{\@comfour}\relax\vskip1.5ex\relax
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in{\@comfive}\relax\vskip1.5ex\relax
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\hskip2in\relax{\@commchair}\relax\vskip-1ex
-\noindent\hskip2in\relax Advisory Committee Chair \vskip2.5ex
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}{\@comthree}\relax\vskip0.23in\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}{\@comfour}\relax\vskip0.23in\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}{\@comfive}\relax\vskip0.23in\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\relax{\@commchair}\relax\vskip-1.0ex
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\relax Advisory Committee Chair \vskip3.4ex
 \fi
 
-\noindent\phantom{\hspace{.25in}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}
-\vskip-1ex\relax\noindent\hskip2in\relax{\@depchair}\relax
-\vskip-1ex\relax\noindent\hskip2in\relax Chair, Department of {\@department} \vskip1.5ex
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\relax{\@depchair}\relax\vskip-1.0ex\relax
+\noindent\phantom{\hspace{\sigxspace}RECOMMENDED:\hspace{.45in}}\relax Chair, Department of {\@department} \vskip1.6ex
 
 \bigskip \bigskip \par
 
-\noindent\hspace{.25in}APPROVED: \hspace{.8in} \rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\phantom{\hspace{.25in}APPROVED: \hspace{.8in} }{\@colldean}\relax\vskip-1ex
-\noindent\phantom{\hspace{.25in}APPROVED: \hspace{.8in} }Dean, {\@college}\hspace{.25in}\vskip2.5ex\relax
-\noindent\phantom{\hspace{.25in}APPROVED: \hspace{.8in} }\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\phantom{\hspace{.25in}APPROVED: \hspace{.8in} }{\@gsdean}\relax\vskip-1ex
-\noindent\phantom{\hspace{.25in}APPROVED: \hspace{.8in} }Dean of the Graduate School\hspace{.25in}\vskip2.5ex\relax
-\noindent\phantom{\hspace{.25in}APPROVED: \hspace{.8in} }\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1ex\relax
-\noindent\phantom{\hspace{.25in}APPROVED: \hspace{.8in} }Date
+\noindent\hspace{\sigxspace}APPROVED: \hspace{.8in} \rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}APPROVED: \hspace{.8in} }{\@colldean}\relax\vskip-1ex
+\noindent\phantom{\hspace{\sigxspace}APPROVED: \hspace{.8in} }Dean, {\@college}\hspace{.25in}\vskip3.4ex\relax
+\noindent\phantom{\hspace{\sigxspace}APPROVED: \hspace{.8in} }\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}APPROVED: \hspace{.8in} }{\@gsdean}\relax\vskip-1.0ex
+\noindent\phantom{\hspace{\sigxspace}APPROVED: \hspace{.8in} }Dean of the Graduate School\hspace{.25in}\vskip2.5ex\relax
+\noindent\phantom{\hspace{\sigxspace}APPROVED: \hspace{.8in} }\rule{\@committeewidth}{.05mm}\hspace{.25in}\vskip-1.6ex\relax
+\noindent\phantom{\hspace{\sigxspace}APPROVED: \hspace{.8in} }Date
 \newpage \thispagestyle{empty}~ % a blank page that serves as the backside of the signature page
 \newpage}
 
