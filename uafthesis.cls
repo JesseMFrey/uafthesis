@@ -53,6 +53,7 @@
 %%      Fixed margins and page numbers for new requirements
 %%      removed makesig macro and messed with spacing to appease the grad school
 %%      Added listofacronyms macro to make a list of acronyms
+%%      Added Page above page numbers above table of contents numbers on every page
 
 
 \NeedsTeXFormat{LaTeX2e} 
@@ -811,7 +812,9 @@
         \@mkboth{\uppercase{\contentsname}}{\uppercase{\contentsname}}}%
     \@chapteronetrue
     %\cftaftertoctitle
+    \AtBeginShipout{\hfill\textbf{Page}\par}
     \@starttoc{toc} 
+    \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
     \newpage\renewcommand{\thepage}{\arabic{page}}}
 
@@ -903,7 +906,9 @@
     %% get this in contents as a section
     \addcontentsline{toc}{frontchapter}{\listappname}
     %\cftafterloftitle
+    \AtBeginShipout{\hfill\textbf{Page}\par}
     \@starttoc{loa}%
+    \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
     \newpage\renewcommand{\thepage}{\arabic{page}}}
 %% list of acronyms for use with the acronym package
@@ -923,7 +928,9 @@
     %% get this in contents as a section
     \addcontentsline{toc}{frontchapter}{\listacname}
     %\cftafterloftitle
+    \AtBeginShipout{\hfill\textbf{Page}\par}
     \input{#1}%
+    \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
     \newpage\renewcommand{\thepage}{\arabic{page}}}
     
@@ -942,7 +949,9 @@
     %% get this in contents as a section
     \addcontentsline{toc}{frontchapter}{\listothermatname}
     %\cftafterloftitle
+    \AtBeginShipout{\hfill\textbf{Page}\par}
     \@starttoc{lom}%
+    \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
     \newpage\renewcommand{\thepage}{\arabic{page}}}
 \newcommand\listoffigures{%
@@ -960,7 +969,9 @@
     %% get this in contents as a section
     \addcontentsline{toc}{frontchapter}{\listfigurename}
     %\cftafterloftitle
+    \AtBeginShipout{\hfill\textbf{Page}\par}
     \@starttoc{lof}%
+    \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
     \newpage\renewcommand{\thepage}{\arabic{page}}}
 \newcommand\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
@@ -978,7 +989,9 @@
     \@chapteronetrue
     \addcontentsline{toc}{frontchapter}{\listtablename}
     %\cftafterloftitle
+    \AtBeginShipout{\hfill\textbf{Page}\par}
     \@starttoc{lot}%
+    \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
     \newpage\renewcommand{\thepage}{\arabic{page}}}
 \let\l@table\l@figure
