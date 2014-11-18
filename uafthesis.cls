@@ -812,7 +812,7 @@
         \@mkboth{\uppercase{\contentsname}}{\uppercase{\contentsname}}}%
     \@chapteronetrue
     %\cftaftertoctitle
-    \AtBeginShipout{\hfill\textbf{Page}\par}
+    \AtBeginShipout{\listheading}
     \@starttoc{toc} 
     \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
@@ -906,7 +906,7 @@
     %% get this in contents as a section
     \addcontentsline{toc}{frontchapter}{\listappname}
     %\cftafterloftitle
-    \AtBeginShipout{\hfill\textbf{Page}\par}
+    \AtBeginShipout{\listheading}
     \@starttoc{loa}%
     \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
@@ -928,7 +928,7 @@
     %% get this in contents as a section
     \addcontentsline{toc}{frontchapter}{\listacname}
     %\cftafterloftitle
-    \AtBeginShipout{\hfill\textbf{Page}\par}
+    \AtBeginShipout{\listheading}
     \input{#1}%
     \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
@@ -949,7 +949,7 @@
     %% get this in contents as a section
     \addcontentsline{toc}{frontchapter}{\listothermatname}
     %\cftafterloftitle
-    \AtBeginShipout{\hfill\textbf{Page}\par}
+    \AtBeginShipout{\listheading}
     \@starttoc{lom}%
     \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
@@ -969,7 +969,7 @@
     %% get this in contents as a section
     \addcontentsline{toc}{frontchapter}{\listfigurename}
     %\cftafterloftitle
-    \AtBeginShipout{\hfill\textbf{Page}\par}
+    \AtBeginShipout{\listheading}
     \@starttoc{lof}%
     \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
@@ -989,7 +989,7 @@
     \@chapteronetrue
     \addcontentsline{toc}{frontchapter}{\listtablename}
     %\cftafterloftitle
-    \AtBeginShipout{\hfill\textbf{Page}\par}
+    \AtBeginShipout{\listheading}
     \@starttoc{lot}%
     \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
@@ -1086,6 +1086,9 @@
 \newcommand\acknowledgename{Acknowledgments}
 \newcommand\prefname{Preface}
 \newcommand\indname{Index}
+
+%Extra page Heading (pages 2+) for list of tables/appendices... Redefine as necessary
+\newcommand\listheading{\hfill{Page}\par}
 
 %% get bibliography in contents as a section (robustly)
 \renewcommand\bibliography[1]{
