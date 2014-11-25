@@ -183,7 +183,6 @@
 \def\maketitle{
 {   \let\footnotesize\small
     \let\footnoterule\relax
-    \if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
     \setcounter{page}{3} 
     \thispagestyle{empty}
     \addcontentsline{toc}{frontchapter}{\titlename}
@@ -231,9 +230,8 @@
 %% (this bastard finally is independent of the font you choose for the thesis!)
 %% It's also independent of department! Woo!
 \def\makenamedsig{
-\setcounter{page}{1}
+\pagenumbering{Roman}
 \thispagestyle{empty}
-\if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
 \addcontentsline{toc}{frontchapter}{\signame}
 
 \begin{center}
@@ -307,49 +305,39 @@
 %% the abstract goes here and gets its page set to 5, as req'd (note:
 %% abstract and acknowledgements are frontschap's --> defined later)
 \newenvironment{abstract}{
-\if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
 \setcounter{page}{5}\frontchap*{\abstractname}
 \addcontentsline{toc}{frontchapter}{\abstractname}
 }
-{\newpage\renewcommand{\thepage}{\arabic{page}}}
 
 %% after the acknowledgements we reset to arabic page #'s if req'd
 \newenvironment{acknowledgements}
 {
-\if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
 \newpage\addcontentsline{toc}{frontchapter}{\acknowledgename}
 \frontchap*{\acknowledgename}
 }
-{\newpage\renewcommand{\thepage}{\arabic{page}}}
 
 %% a page for quotes, etc. is allowed here; it is unnumbered
 %%      but page counter advances
 \newenvironment{quotepage}
 {
-\if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
 \frontchap*{\relax}\thispagestyle{empty}
 }
-{\newpage\renewcommand{\thepage}{\arabic{page}}}
 
 %% just for heavner
 \newenvironment{preface}
 {
-\if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
 \newpage\addcontentsline{toc}{frontchapter}{\prefname}
 \frontchap*{\prefname}
 }
-{\newpage\renewcommand{\thepage}{\arabic{page}}}
 
 %% Index (use /index in text, 
 %% have \begin{nindex}\printindex\end{nindex} (after Bib)
 \newenvironment{nindex}
 {
-%\if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
 %%\newpage\addcontentsline{toc}{section}{\indname}
 \newpage\addcontentsline{toc}{frontchapter}{\indname}
 %%\frontchap*{\prefname}
 }
-%%{\newpage\renewcommand{\thepage}{\arabic{page}}}
 
 %%%%%%%%%%%%%%%
 \if@twoside
@@ -800,7 +788,6 @@
 
 \newcommand\tableofcontents{%
     \@chapteronefalse
-    \if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
   \newpage%\addcontentsline{toc}{chapter}{\contentsname}  %added by LEif
 	
     \if@twocolumn
@@ -816,7 +803,7 @@
     \@starttoc{toc} 
     \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
-    \newpage\renewcommand{\thepage}{\arabic{page}}}
+    }
 
 \newcommand\l@part[2]{%
   \ifnum \c@tocdepth >-2\relax
@@ -893,7 +880,6 @@
 \newcommand\l@subparagraph {\@dottedtocline{5}{12em}{6em}}
 \newcommand\listofappendices{%
     \@chapteronefalse
-    \if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
     \if@twocolumn
       \@restonecoltrue\onecolumn
     \else
@@ -910,12 +896,11 @@
     \@starttoc{loa}%
     \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
-    \newpage\renewcommand{\thepage}{\arabic{page}}}
+    }
 %% list of acronyms for use with the acronym package
 %% Input file is the acronym table
 \newcommand\listofacronyms[1]{%
     \@chapteronefalse
-    \if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
     \if@twocolumn
       \@restonecoltrue\onecolumn
     \else
@@ -932,11 +917,10 @@
     \input{#1}%
     \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
-    \newpage\renewcommand{\thepage}{\arabic{page}}}
+    }
     
 \newcommand\listofothermaterials{%
     \@chapteronefalse
-    \if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
     \if@twocolumn
       \@restonecoltrue\onecolumn
     \else
@@ -953,10 +937,9 @@
     \@starttoc{lom}%
     \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
-    \newpage\renewcommand{\thepage}{\arabic{page}}}
+    }
 \newcommand\listoffigures{%
     \@chapteronefalse
-    \if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
     \if@twocolumn
       \@restonecoltrue\onecolumn
     \else
@@ -973,11 +956,10 @@
     \@starttoc{lof}%
     \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
-    \newpage\renewcommand{\thepage}{\arabic{page}}}
+    }
 \newcommand\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
 \newcommand\listoftables{%
     \@chapteronefalse
-    \if@arabic\relax\else\renewcommand{\thepage}{\roman{page}}\fi
     \if@twocolumn
       \@restonecoltrue\onecolumn
     \else
@@ -993,7 +975,7 @@
     \@starttoc{lot}%
     \gdef\AtBegShi@Hook{}
     \if@restonecol\twocolumn\fi
-    \newpage\renewcommand{\thepage}{\arabic{page}}}
+    }
 \let\l@table\l@figure
 \newdimen\bibindent
 \bibindent=1.5em
@@ -1106,7 +1088,6 @@
 \setlength\columnsep{10\p@}
 \setlength\columnseprule{0\p@}
 \pagestyle{myheadings}
-\pagenumbering{arabic}      % Arabic page numbers
 \if@twoside
 \else
   \raggedbottom
