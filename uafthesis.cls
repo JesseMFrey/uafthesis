@@ -230,7 +230,7 @@
 %% (this bastard finally is independent of the font you choose for the thesis!)
 %% It's also independent of department! Woo!
 \def\makenamedsig{
-\pagenumbering{Roman}
+\pagenumbering{roman}
 \thispagestyle{empty}
 \addcontentsline{toc}{frontchapter}{\signame}
 
