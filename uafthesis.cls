@@ -788,7 +788,7 @@
 
 \newcommand\tableofcontents{%
     \@chapteronefalse
-  \newpage%\addcontentsline{toc}{chapter}{\contentsname}  %added by LEif
+  \newpage\addcontentsline{toc}{chapter}{\contentsname}
 	
     \if@twocolumn
       \@restonecoltrue\onecolumn
