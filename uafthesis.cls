@@ -374,7 +374,7 @@
     }
 
 \newcommand\chaptermark[1]{}
-\setcounter{secnumdepth}{2}
+\setcounter{secnumdepth}{4}
 \newcounter {part}
 \newcounter {chapter}
 \newcounter {section}[chapter]
@@ -784,7 +784,7 @@
 \newcommand\@pnumwidth{1.55em}
 \newcommand\@tocrmarg {2.55em}
 \newcommand\@dotsep{4.5}
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{4}
 
 \newcommand\tableofcontents{%
     \@chapteronefalse
